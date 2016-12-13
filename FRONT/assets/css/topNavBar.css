@@ -1,0 +1,111 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+
+
+.list-of-links {
+    background-color: #FEFEFF;
+    border-bottom: solid #F78620;
+    border-width: 10px;
+    height: 100px;
+    word-spacing: 70px;
+    text-align: center;
+}
+
+.link-item {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    transition: ease-out 0.5s;
+}
+
+.link {
+    font-family: Oswald;
+    font-size: 40px;
+    text-align: center;
+    text-decoration: none;
+    color: #F78620;
+    transition: ease-out 0.2s;
+}
+
+.link:hover {
+    background-color: #F78620;
+    color: #FFF;
+    padding-top: 500px;
+    padding-bottom: 20px;
+    padding-right: 20px;
+    padding-left: 20px;
+    transition: ease-out 0.5s;
+}
+
+.secondary-list-of-links {
+    background-color: #FEFEFF;
+    border-bottom: solid #F78620;
+    border-width: 10px;
+    height: 50px;
+    word-spacing: 5px;
+    text-align: left;
+}
+
+.secondary-link-item {
+    display: inline-block;
+    margin-top: 5px;
+    text-decoration: none;
+    transition: ease-out 0.5s;
+}
+
+.secondary-link {
+    font-family: Oswald;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+    color: #F78620;
+    transition: ease-out 0.2s;
+}
+
+.secondary-link:hover {
+    background-color: #F78620;
+    color: #677AC1;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    transition: ease-out 0.5s;
+}
+
+/*.ng-hide-add {
+    font-family: Oswald;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    color: #875555;
+    transition: ease-out 0.2s;
+}
+
+.ng-hide-remove{
+    transition: ease-out 0.2s;
+}*/
+
+.sample {
+    transition: ease-out 0.5s;
+}
+.sample.ng-hide{
+    opacity: 0;
+}
+
+.settings-block {
+    background-color: #875555;
+    color: #4A4A4A;
+    transition: ease-out 0.5s;
+    font-family: Oswald;
+    font-size: 20px;
+    text-align: left;
+    text-decoration: none;
+}
+
+// backup styles
+/*
+background-color: #4A4A4A;
+border-bottom: solid #875555;
+
+background-color: #875555;
+color: #4A4A4A;
+
+*/

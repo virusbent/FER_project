@@ -1,0 +1,34 @@
+<div class="row no">
+    <div class="col-lg-10 col-lg-offset-1">
+        <div class="left-caret"></div>
+        <div class="col-lg-3">
+            <div class="thumbnail">
+                <img src="http://placehold.it/75x75" alt="placeholder">
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div>Room: {{orderData.room_name}}</div>
+            <div>
+                <div>On date: {{orderData.date.date}}</div>
+                <div>At time: {{orderData.date.time}}</div>
+                <div>At address: {{orderData.address}},
+                    Appartment: {{orderData.number}},
+                    On level: {{orderData.lvl}}</div>
+            </div>
+            <div class="cost">
+                <span>- $$$ -</span>
+            </div>
+        </div>
+        <div class="col-lg-1 nopadding" id="{{orderData.id_literal}}" style="float: right">
+            <div>
+                <i class="fa fa-usd fa-2x" id="{{orderData.id_literal}}" aria-hidden="true" ng-click="payForOrder($event)"></i>
+            </div>
+            <div>
+                <i class="fa fa-cogs fa-2x" id="{{orderData.id_literal}}" aria-hidden="true" ng-click="editThisOrder($event)"></i>
+            </div>
+            <div>
+                <i class="fa fa-times fa-2x" id="{{orderData.id_literal}}" aria-hidden="true" ng-click="deleteThisOrder($event)"></i>
+            </div>
+        </div>
+    </div>
+</div>

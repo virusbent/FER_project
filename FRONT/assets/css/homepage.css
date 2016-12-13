@@ -1,0 +1,27 @@
+@import url(http://fonts.googleapis.com/css?family=Allura|Oswald|Rubik+Mono+One|Ubuntu:400,500);
+
+.greet {
+    font-family: 'Oswald';
+    font-size: 1.8em;
+}
+.sub_greet {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 400;
+    font-size: 1.2em;
+}
+
+.preview_title {
+    font-family: 'Oswald';
+    height: 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+}
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
+}
+.borders{
+    border-top   : 1px solid gray;
+    border-bottom: 1px solid gray;
+}

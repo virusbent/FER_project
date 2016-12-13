@@ -1,0 +1,30 @@
+<div class="row">
+    <div class="col-lg-6 col-lg-offset-3">
+        <div class="btn-group btn-group-lg" role="group" aria-label="...">
+          <button type="button" class="btn btn-default" id="noFilter"
+              ng-click="rc.applyFilter($event)">No Filter</button>
+          <div class="btn-group btn-group-lg" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  By Popularity
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li ng-click="rc.applyFilter($event)" id="type.recommended">Recommended</li>
+              <li ng-click="rc.applyFilter($event)" id="type.trending">Trending</li>
+              <li ng-click="rc.applyFilter($event)" id="type.showAll">Both</li>
+            </ul>
+          </div>
+          <div class="btn-group btn-group-lg" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              By Rating
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li ng-click="rc.applyFilter($event)" id="rating.star4">4 stars</li>
+              <li ng-click="rc.applyFilter($event)" id="rating.star3">3 stars</li>
+            </ul>
+          </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container-fluid">
+    <div class="row">
+        <div>
+            <span class="greet">Welcome {{hc.anon.name}} !</span>
+            <div class="sub_greet">
+                <span>You can do things here such:</span>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A aspernatur delectus esse facilis laudantium, magnam magni minima minus mollitia nemo numquam officia quam quod reiciendis similique, suscipit vel vitae. Distinctio excepturi inventore optio quibusdam quidem quo saepe similique? Asperiores consectetur delectus distinctio illo necessitatibus, obcaecati officia possimus ratione. Iste, nam?</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+                <i class="fa fa-angle-double-right fa-2x"
+                    aria-hidden="true"
+                    style="margin-right: 2px;">
+                </i>
+                <span class="preview_title">Most Recomended Rooms</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-1 align-middle" ng-click="hc.moveSlide('move_left')">
+                    <i class="fa fa-chevron-left fa-5x" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-10">
+                    <room-full-view room-data="hc.currentRoom"></room-full-view>
+                </div>
+                <div class="col-lg-1 align-middle" ng-click="hc.moveSlide('move_right')">
+                    <i class="fa fa-chevron-right fa-5x" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

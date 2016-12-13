@@ -1,0 +1,54 @@
+    <div class="row" id="auth_choise_bar">
+        <div class="col-lg-10 col-lg-offset-1" style="border: 1px solid black;">
+            <div class="col-lg-8 col-lg-offset-4">
+                <div class="btn-group-lg" role="group">
+                    <button type="button" class="btn btn-default"
+                        name="login" ng-click="apc.chooseAuthMethod('login')">LOG-IN</button>
+                    <button type="button" class="btn btn-default"
+                        name="signup" ng-click="apc.chooseAuthMethod('signup')">SIGN-UP</button>
+                </div>
+            </div>
+            <hr class="hr-style">
+            <br>
+        </div>
+    </div>
+
+    <div class="row" id="authentication" >
+        <div class="col-lg-5 col-lg-offset-0.5" id="login_section" ng-disabled="apc.authChoise.login.isRequireBlocking" style="border: 1px solid green;">
+            <div class="input-group">
+                <div>
+                    <span>email:</span>
+                    <input type="text" class="form-control" ng-model="emailLogin" ng-disabled="apc.authChoise.login.isRequireBlocking">
+                </div>
+                <div>
+                    <span>password:</span>
+                    <input type="text" class="form-control" ng-model="passwordLogin" ng-disabled="apc.authChoise.login.isRequireBlocking">
+                </div>
+            </div>
+            <div id="testing">
+                <span>your email: {{emailLogin}}</span>
+                <span>your password: {{passwordLogin}}</span>
+            </div>
+            <button type="button" name="submit" ng-click="apc.DEV_authSubmit()" ng-disabled="apc.authChoise.login.isRequireBlocking">Log In</button>
+        </div>
+        <div class="col-lg-1">
+            <!-- vertical hr -->
+        </div>
+        <div class="col-lg-5 col-lg-offset-0.5" id="signup_section" style="border: 1px solid green;">
+            <span>username:
+                <input type="text" class="form-control" ng-model="usernameInput" ng-disabled="apc.authChoise.signup.isRequireBlocking">
+            </span>
+            <span>email:
+                <input type="text" class="form-control" ng-model="emailInput" ng-disabled="apc.authChoise.signup.isRequireBlocking">
+            </span>
+            <span>password:
+                <input type="text" class="form-control" ng-model="passwordInput" ng-disabled="apc.authChoise.signup.isRequireBlocking">
+            </span>
+            <span>re-type password:
+                <input type="text" class="form-control" ng-model="passwordReInput" ng-disabled="apc.authChoise.signup.isRequireBlocking">
+            </span>
+            <button type="button" name="submit" ng-click="apc.DEV_authSubmit()" ng-disabled="apc.authChoise.signup.isRequireBlocking">Sign Up</button>
+        </div>
+    </div>
+
+    </div>

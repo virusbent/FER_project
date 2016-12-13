@@ -1,0 +1,88 @@
+    <div class="col-lg-12" style="border:1px solid gray; margin-bottom: 20px;">
+        <div class="col-lg-12 details-collapse no-gutter" id="{{data.id_literal}}">
+            <div id='title' class="col-lg-12" style="height: 2em;">
+                Recommended Room #{{data.room_id}}
+            </div>
+            <div id='content' class="col-lg-12 no-gutter">
+                <div id='room_img' class="col-lg-4">
+                    <img src="http://placehold.it/250x250" class="img-preview"  />
+                </div>
+                <div class="col-lg-8">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                    nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
+                    officia deserunt mollit anim id est laborum.
+                </div>
+                 <!-- up until this, it was room.small.view -->
+                 <!-- now below this, it is the expanded version -->
+                <div id='room_more_img' class="col-lg-12">
+                    <img src="http://placehold.it/75x75" class="img-preview"  />
+                    <img src="http://placehold.it/75x75" class="img-preview"  />
+                    <img src="http://placehold.it/75x75" class="img-preview"  />
+                    <img src="http://placehold.it/75x75" class="img-preview"  />
+                    <img src="http://placehold.it/75x75" class="img-preview"  />
+                    <img src="http://placehold.it/75x75" class="img-preview"  />
+                </div>
+                <!-- Use this directive if needed, until then i dont think that it needs to be a directive -->
+                <!-- <payment-info></payment-info> -->
+                <hr class="hr-style">
+                <div class="col-lg-6" id="how_to_pay">
+                    <h4>Costs and Payment Methods</h4>
+                    <div id="costs_info">
+                        <div>
+                            <span>3 people : {{cost}}</span>
+                        </div>
+                        <div>
+                            <span>4 people : $$$$</span>
+                        </div>
+                        <div>
+                            <span>5 people : $$$$$</span>
+                        </div>
+                        <div>
+                            <span>6 people : $$$$$$</span>
+                        </div>
+                    </div>
+                    <fer-payment-options></fer-payment-options>
+                </div>
+                <div class="col-lg-6" id="room_location"  >
+                    <h5>Room's Location</h5>
+                    <ng-map class="col-lg-12" center="[40.74, -74.18]"></ng-map>
+                </div>
+                <hr class="hr-style">
+                <div class="col-lg-6" id="additional_info">
+                    <div>
+                        <h5>More details...</h5>
+                        <span>{{data.details}}</span>
+                    </div>
+                    <div>
+                        <h5>Tel:</h5>
+                        <span>{{data.tel}}</span>
+                    </div>
+                    <div>
+                        <h5>Adress</h5>
+                        <span>{{data.address}}</span>
+                    </div>
+                    <div>
+                        <h5>Directions</h5>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Vitae dolor, mollitia dolorum velit ducimus,
+                            totam delectus excepturi doloribus maiores perferendis commodi,
+                            ut quidem fugit sunt.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-lg-offset-4">
+                    <button type="button" class="btn btn-success"
+                        id="{{data.room_id}}" ng-click="handleThisRoom($event)">
+                        <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                        Make an Order Now!
+                    </button>
+                </div>
+            </div>
+        </div>
+        <footer class="col-lg-12 text-center bg-info" show-hide room-id="{{data.id_literal}}">
+            more info...
+        </footer>
+    </div>

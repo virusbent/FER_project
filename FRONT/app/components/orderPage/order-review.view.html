@@ -1,0 +1,60 @@
+<div class="container-fluid">
+    <div class="row">
+        <div>
+            <span class="greet">Here you can review your order just right before you pay</span>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-10">
+                    <i class="fa fa-angle-double-right fa-2x"
+                        aria-hidden="true"
+                        style="margin-right: 2px;">
+                    </i>
+                    <span class="preview_title">Room information</span>
+                </div>
+                <div class="col-lg-10 col-lg-offset-1">
+                    <fer-room-details-before-order room-data="orc.currRoomData"></fer-room-details-before-order>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="col-lg-10">
+                    <i class="fa fa-angle-double-right fa-2x"
+                        aria-hidden="true"
+                        style="margin-right: 2px;">
+                    </i>
+                    <span class="preview_title">Date and Time of the game</span>
+                </div>
+                <div class="col-lg-4">
+                    <span>Pick a date</span>
+                    <div uib-datepicker ng-model="date" datepicker-options="orc.dateOptions"></div>
+                </div>
+                <div class="col-lg-8">
+                    <fer-day-schedule
+                        schedule-data="orc.DayScheduleData"
+                        handle-time="orc.saveOrderTime"></fer-day-schedule>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+              <!-- <div class="dropdown">
+                  <a class="dropdown-toggle" id="dLabel" role="button" data-toggle="dropdown" data-target="" href="">
+                      Click here to show calendar
+                  </a>
+                  <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                      <datetimepicker data-ng-model="data.date"
+                                      data-datetimepicker-config="{ dropdownSelector: '.dropdown-toggle' }"></datetimepicker>
+                  </ul>
+              </div> -->
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-lg-offset-4">
+            <button type="button" class="btn btn-success" ng-click="orc.addToCart()">
+                <i class="fa fa-shopping-cart fa-2x" aria-hidden="true"></i>
+                Add To Cart!
+            </button>
+        </div>
+</div>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="FER_app">
+<head>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/topNavBar.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/homepage.css">
+    <link rel="stylesheet" href="./assets/css/authChoiseBar.css">
+    <link rel="stylesheet" href="./assets/css/room.preview.css">
+    <link rel="stylesheet" href="./app/shared/directives/cart/cart-item/cart-item.css">
+    <!-- Font Awesome CDN -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+    <!-- BootStrap - Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Angular-bootstrap date-TIME-picker -->
+    <link rel="stylesheet" href="node_modules/angular-bootstrap-datetimepicker/src/css/datetimepicker.css"/>
+    <!-- Angular-ui-bootstrap date-picker (date only)-->
+    <link rel="stylesheet" href="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-csp.css"/>
+    <!-- jQuery CDN (required for working with Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk="   crossorigin="anonymous"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- Google Maps -->
+    <script src="http://maps.google.com/maps/api/js?key=AIzaSyC1qe2DjfDzgH8053fUZRzz65QdjOENvz4"></script>
+    <!-- Angular scripts -->
+    <script src="node_modules/angular/angular.js"></script>
+    <script src="node_modules/angular-route/angular-route.js"></script>
+    <script src="node_modules/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="node_modules/angular-animate/angular-animate.js"></script>
+    <script src="node_modules/ngmap/build/scripts/ng-map.js"></script>
+    <!-- Custum Scripts -->
+    <script src="node_modules/object.observe/dist/object-observe.js"></script>
+        <!-- angular-bootstrap date and time picker -->
+    <script type="text/javascript" src="node_modules/angular-bootstrap-datetimepicker/node_modules/moment/moment.js"></script>
+    <script type="text/javascript" src="node_modules/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
+    <script type="text/javascript" src="node_modules/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
+        <!-- angular-ui-bootsrap -->
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+    <script type="text/javascript" src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+    </script>
+    <meta charset="UTF-8">
+    <title>Family Escape Rooms</title>
+</head>
+<body>
+    <div class="bg_all" ng-controller="mainCtrl as main">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                        <ul class="list-of-links">
+                            <li class="link-item"><span class="link" ui-sref="home">  HOME </span></li>
+                            <li class="link-item"><span class="link" ui-sref="rooms"> ROOMS</span></li>
+                            <li class="link-item"><span class="link" ui-sref="about"> ABOUT</span></li>
+                            <li class="link-item"><span class="link" ng-click="toggleSettings()">
+                                MORE
+                            </span></li>
+                            <!-- <li class="link-item"><a href="/contact" class="link">CONTACT</a></li>
+                            <li class="link-item"><a href="/settings" class="link">
+                                <span class="glyphicon glyphicon-cog"></span></a></li> -->
+                        </ul>
+                </div>
+            </div>
+            <div class="row sample" ng-show="main.showAdditionalSettings">
+                <div class="col-lg-12">
+                    <ul class="secondary-list-of-links" ng-show="main.nonLoggedUserSetting">
+                        <li class="secondary-link-item">
+                            <span class="secondary-link" ui-sref="authentication">Log In</span>
+                        </li>
+                        <li class="secondary-link-item">
+                            <span class="secondary-link" ui-sref="authentication">Sign Up</span>
+                        </li>
+                    </ul>
+                    <ul class="secondary-list-of-links" ng-show="main.loggedUserSettings">
+                        <li class="secondary-link-item">
+                            <span class="secondary-link" ui-sref="authentication">Log Out</span>
+                        </li>
+                        <li class="secondary-link-item">
+                            <span class="secondary-link" ui-sref="cart">Cart</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="main_container">
+                        <div id="main-title">
+                            <h1 class="text-center oswald_font big_title">
+                                <span class="upper_case">F</span><span class="lower_case">amily</span>
+                                <span class="upper_case">E</span><span class="lower_case">scape</span>
+                                <span class="upper_case">R</span><span class="lower_case">ooms</span>
+                            </h1>
+                            <h3 class="text-center sub_title allura_font">
+                                - A place where you and your family can do shit for an hour.
+                            </h3>
+                        </div>
+
+                        <div ui-view></div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </div>
+
+
+
+<!-- ////////////////// SCRIPTS ////////////////// -->
+    <script src="app/app.module.js"></script>
+
+    <script src="/app/components/main/mainCtrl.js"></script>
+    <script src="/app/components/homepage/home.controller.js"></script>
+    <script src="/app/components/roomspage/rooms.controller.js"></script>
+    <script src="/app/components/authpage/authentication.controller.js"></script>
+    <script src="/app/components/settings.conteiner/settings.controller.js"></script>
+    <script src="/app/components/addNewRoom/addNewRoom.controller.js"></script>
+    <script src="/app/components/editRoom/editRoom.controller.js"></script>
+    <script src="/app/components/orderPage/order-review.controller.js"></script>
+    <script src="/app/components/cart/cart.controller.js"></script>
+
+    <script src="/app/components/authpage/authentication.service.js"></script>
+    <script src="/app/components/roomspage/rooms.services.js"></script>
+    <script src="/app/shared/directives/room/day-schedule/day-schedule.service.js"></script>
+    <script src="/app/components/orderPage/order-confirmation.service.js"></script>
+    <script src="/app/components/cart/cart.buy-service.js"></script>
+
+    <script src="/app/shared/directives/room/room.small/room.small.directive.js"></script>
+    <script src="/app/shared/directives/room/room.big/room.big.directive.js"></script>
+    <script src="/app/shared/directives/room/room.title/room.title.directive.js"></script>
+    <script src="/app/shared/directives/room/show.hide.details/show.hide.js"></script>
+    <script src="/app/shared/directives/room/details-before-order/details-before-order.directive.js"></script>
+    <script src="/app/shared/directives/room/howtopay.info/howtopay.directive.js"></script>
+    <script src="/app/shared/directives/room/day-schedule/day-schedule.directive.js"></script>
+    <script src="/app/shared/directives/payment.info/payment.info.directive.js"></script>
+    <script src="/app/shared/directives/filter-options/filter-options.directive2.js"></script>
+    <script src="/app/shared/directives/cart/cart-item/cart-item.directive.js"></script>
+
+    <script src="/app/shared/factories/mainFactory.js"></script>
+    <script src="/app/shared/factories/roomFactory.js"></script>
+    <script src="/app/shared/factories/authFactory.js"></script>
+    <script src="/app/shared/factories/mockFactory.js"></script>
+
+    <script src="/app/components/roomspage/rooms.filterByType.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="row">
+       <div class="col-lg-12">
+            <div class="row">
+                <i class="fa fa-angle-double-right fa-2x"
+                    aria-hidden="true"
+                    style="margin-right: 2px;">
+                </i>
+                <span class="preview_title">General Information</span>
+            </div>
+            <div class="row" id="gen-info">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="input-group">
+                        <div>
+                            <span>Room Name:</span>
+                            <input type="text" class="form-control" ng-model="roomName">
+                        </div>
+                        <div>
+                            <span>Description:</span>
+                            <textarea rows="5" cols="150"
+                                class="form-control" ng-model="roomDesc"></textarea>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <i class="fa fa-angle-double-right fa-2x"
+                    aria-hidden="true"
+                    style="margin-right: 2px;">
+                </i>
+                <span class="preview_title">Location</span>
+            </div>
+            <div class="row" id="location-info">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="input-group">
+                        <div>
+                            <span>Room Adress:</span>
+                            <input type="text" class="form-control" ng-model="roomAddress">
+                                <div class="col-lg-6 col-lg-offset-6">
+                                    <div class="col-lg-6">
+                                        <span>Level:</span>
+                                        <input type="text" class="form-control" ng-model="roomLvl">
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <span>Appartment Number:</span>
+                                        <input type="text" class="form-control" ng-model="roomNum">
+                                    </div>
+                                </div>
+                        </div>
+                        <div>
+                            <span>Room Tel:</span>
+                            <input type="text" class="form-control" ng-model="roomTel">
+                        </div>
+                    </div>
+                    <div>
+                        <span>GoogleMaps Marker:</span>
+                        <div>
+                            <ng-map class="col-lg-6" center="[40.74, -74.18]"></ng-map>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <i class="fa fa-angle-double-right fa-2x"
+                    aria-hidden="true"
+                    style="margin-right: 2px;">
+                </i>
+                <span class="preview_title">Images</span>
+            </div>
+            <div class="row" id="imgs">
+                <div class="col-lg-10 col-lg-offset-1">
+                    <div class="input-group">
+                        <div>
+                            <span>Image URL:</span>
+                            <input type="text" class="form-control" ng-model="imgURL">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/150x150" class="img-preview"  />
+                            <img src="http://placehold.it/150x150" class="img-preview"  />
+                            <img src="http://placehold.it/150x150" class="img-preview"  />
+                            <img src="http://placehold.it/150x150" class="img-preview"  />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-lg-offset-4">
+                    <button class="btn btn-default" ng-click="anrc.saveNewEscapeRoom()">Add Escape Room</button>
+                </div>
+            </div>
+       </div>
+    </div>
+</div>

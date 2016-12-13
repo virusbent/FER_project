@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <fer-filter-options-bar></fer-filter-options-bar>
+    <div class="row">
+        <h1>{{rc.title}}</h1>
+        <h1></h1>
+        <div class="row">
+            <div class="col-lg-10 col-lg-offset-1"
+                 ng-repeat="room in rc.allRoomsData | filterType">
+                 <div>
+                     <room-full-view room-data="room" handle-this-room="rc.handleThisRoom"></room-full-view>
+                 </div>
+                 <hr>
+            </div>
+        </div>
+        <div class="row">
+            <hr class="hr-style">
+        </div>
+    </div>
+
+</div>

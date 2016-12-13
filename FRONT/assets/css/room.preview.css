@@ -1,0 +1,19 @@
+.img-preview{
+    margin-right: 2px;
+    margin-bottom: 5px;
+    box-shadow: 2px 2px 4px #727272;
+}
+
+.details-expand{
+    overflow: auto;
+    height: auto;
+}
+
+.details-collapse{
+    overflow: hidden;
+    height: 40vh;
+}
+
+.bg-info:hover{
+    background-color: #a2d0e8;
+}

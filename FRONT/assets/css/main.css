@@ -1,0 +1,70 @@
+@import url(http://fonts.googleapis.com/css?family=Oswald);
+@import url(http://fonts.googleapis.com/css?family=Allura|Rubik+Mono+One|Ubuntu:400);
+
+.no-gutter > [class*='col-']{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+.no-gutter{
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+.oswald_font {
+    font-family: Oswald;
+}
+.allura_font {
+    font-family: 'Allura', cursive;
+}
+.rubik_mono_font {
+    font-family: 'Rubik Mono One', sans-serif;
+}
+
+.upper_case {
+    font-size: 120px;
+    margin: -5px;
+    color: #F78620;
+}
+.lower_case {
+    font-size: 60px;
+}
+
+.big_title{
+    font-size: 80px;
+}
+.sub_title {
+    font-size: 30px;
+}
+
+.bg_all {
+    /*background-color: #F78620;*/
+    background-color: #FEFEFF;
+    height: 100vh;
+    width: 100vw;
+}
+
+.main_container {
+    /*border: 1px solid red;*/
+    /*background-color: #b7b7b7;*/
+    background-color: #FEFEFF;
+    box-shadow: 0 0 1em #727272;
+    min-height: 60vh;
+    height: auto;
+    padding: 1em;
+}
+
+.nopadding {
+    padding: 0px; !important;
+    margin : 0px; !important;
+}
+
+.day-item{
+    border: 1px solid grey;
+    border-radius: 2%;
+    background-color: #FFF0F2;
+    margin: 2px;
+}
+
+.schedule-cell{
+    width: 30%;
+}
